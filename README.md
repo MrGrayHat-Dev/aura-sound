@@ -3,8 +3,6 @@ A Chrome extension that applies a crystal clear spatial audio effect to all HTML
 
 # Spatial Audio Effect - Chrome Extension
 
-[![Generic badge](https://img.shields.io/badge/Made%20with-JavaScript-blue.svg)](https://shields.io/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 This Chrome extension enhances your web Browse experience by applying a dynamic, crystal clear spatial audio effect to all `<audio>` and `<video>` elements on any webpage. Using the Web Audio API, it creates an immersive 3D soundscape, making it feel like the audio is coming from a fixed point in space around you.
 
 ## Features
@@ -49,6 +47,4 @@ To install this extension locally, follow these steps:
 -   **`content.js`**: The core JavaScript file that contains all the logic for applying the spatial audio effect.
 -   **`icon16.png`, `icon48.png`, `icon128.png`**: Icons for the extension.
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
