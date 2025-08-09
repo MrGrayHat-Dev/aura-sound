@@ -2,11 +2,10 @@
 // This is the central object for all audio processing.
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-// ====================================================================================================
 // applySpatializer(mediaElement)
 // This function sets up the spatial audio effect for a given media element.
 // It creates an audio graph: mediaElement -> sourceNode -> pannerNode -> compressorNode -> filterNode -> gainNode -> destination.
-// ====================================================================================================
+
 function applySpatializer(mediaElement) {
   // Prevent applying the effect multiple times to the same element.
   if (mediaElement.spatialized) {
@@ -71,12 +70,10 @@ function applySpatializer(mediaElement) {
   }
 }
 
-// ====================================================================================================
+
 // DOM Observation and Initial Application
 // These sections ensure the spatializer is applied to all media elements,
 // whether they are present on page load or added dynamically later.
-// ====================================================================================================
-
 // Create a MutationObserver to watch for new media elements being added to the document.
 const observer = new MutationObserver(mutations => {
   mutations.forEach(mutation => {
@@ -103,3 +100,4 @@ observer.observe(document.body, { childList: true, subtree: true });
 document.querySelectorAll('audio, video').forEach(mediaElement => {
   applySpatializer(mediaElement);
 });
+
